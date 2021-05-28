@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>element:执行dev脚本 | Yisen的博客</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="shortcut icon" href="/img/shi.jpg">
+    <meta name="description" content="每一件事都要做到精彩绝伦!">
+    <link rel="preload" href="/assets/css/0.styles.f52552f8.css" as="style"><link rel="preload" href="/assets/js/app.d27cd32c.js" as="script"><link rel="preload" href="/assets/js/2.92947368.js" as="script"><link rel="preload" href="/assets/js/16.906d6d4a.js" as="script"><link rel="preload" href="/assets/js/4.47214791.js" as="script"><link rel="prefetch" href="/assets/js/10.b84025ed.js"><link rel="prefetch" href="/assets/js/11.7c58c5d6.js"><link rel="prefetch" href="/assets/js/12.de2d8102.js"><link rel="prefetch" href="/assets/js/13.fe377b65.js"><link rel="prefetch" href="/assets/js/14.f1cd7aa2.js"><link rel="prefetch" href="/assets/js/15.4f75d4bb.js"><link rel="prefetch" href="/assets/js/17.d95554d5.js"><link rel="prefetch" href="/assets/js/18.9dede249.js"><link rel="prefetch" href="/assets/js/19.0621538b.js"><link rel="prefetch" href="/assets/js/20.13e018e3.js"><link rel="prefetch" href="/assets/js/21.e4a06620.js"><link rel="prefetch" href="/assets/js/22.59f52ec6.js"><link rel="prefetch" href="/assets/js/23.4375f24d.js"><link rel="prefetch" href="/assets/js/24.60cdd050.js"><link rel="prefetch" href="/assets/js/25.4d704b8b.js"><link rel="prefetch" href="/assets/js/26.e631c778.js"><link rel="prefetch" href="/assets/js/27.d89a92fd.js"><link rel="prefetch" href="/assets/js/28.9fb2b865.js"><link rel="prefetch" href="/assets/js/29.e6c33b9a.js"><link rel="prefetch" href="/assets/js/3.74592acf.js"><link rel="prefetch" href="/assets/js/30.5072f4fc.js"><link rel="prefetch" href="/assets/js/31.3788aee1.js"><link rel="prefetch" href="/assets/js/32.6dca2967.js"><link rel="prefetch" href="/assets/js/33.d4f526b6.js"><link rel="prefetch" href="/assets/js/34.85f6fbec.js"><link rel="prefetch" href="/assets/js/35.c3af1511.js"><link rel="prefetch" href="/assets/js/36.e5984d80.js"><link rel="prefetch" href="/assets/js/37.665a9578.js"><link rel="prefetch" href="/assets/js/38.21ba26ad.js"><link rel="prefetch" href="/assets/js/39.0a876c87.js"><link rel="prefetch" href="/assets/js/40.89e82318.js"><link rel="prefetch" href="/assets/js/41.2a85a586.js"><link rel="prefetch" href="/assets/js/42.364f1105.js"><link rel="prefetch" href="/assets/js/43.b7afe916.js"><link rel="prefetch" href="/assets/js/44.45cc108b.js"><link rel="prefetch" href="/assets/js/45.8e8c0e3e.js"><link rel="prefetch" href="/assets/js/46.aec4a7c6.js"><link rel="prefetch" href="/assets/js/47.16de224f.js"><link rel="prefetch" href="/assets/js/48.1764fd61.js"><link rel="prefetch" href="/assets/js/49.996c2583.js"><link rel="prefetch" href="/assets/js/5.3113bf0c.js"><link rel="prefetch" href="/assets/js/50.e7e0b373.js"><link rel="prefetch" href="/assets/js/51.1e509337.js"><link rel="prefetch" href="/assets/js/52.9614344e.js"><link rel="prefetch" href="/assets/js/53.2888eeac.js"><link rel="prefetch" href="/assets/js/54.8e6da259.js"><link rel="prefetch" href="/assets/js/55.a19f7f2c.js"><link rel="prefetch" href="/assets/js/56.2ca5e5ed.js"><link rel="prefetch" href="/assets/js/57.bd9f18b7.js"><link rel="prefetch" href="/assets/js/58.ba151f1c.js"><link rel="prefetch" href="/assets/js/59.5fbb5939.js"><link rel="prefetch" href="/assets/js/6.7265dd24.js"><link rel="prefetch" href="/assets/js/60.81acd1a4.js"><link rel="prefetch" href="/assets/js/61.f7a24079.js"><link rel="prefetch" href="/assets/js/62.9bceffe9.js"><link rel="prefetch" href="/assets/js/63.e8e639ce.js"><link rel="prefetch" href="/assets/js/64.acff45e3.js"><link rel="prefetch" href="/assets/js/65.10d11424.js"><link rel="prefetch" href="/assets/js/66.f0145b9b.js"><link rel="prefetch" href="/assets/js/67.696da77d.js"><link rel="prefetch" href="/assets/js/68.7e5cd622.js"><link rel="prefetch" href="/assets/js/69.1d5a4b4b.js"><link rel="prefetch" href="/assets/js/7.4fd397db.js"><link rel="prefetch" href="/assets/js/70.6f77d1a2.js"><link rel="prefetch" href="/assets/js/71.221c9a4e.js"><link rel="prefetch" href="/assets/js/72.22c63902.js"><link rel="prefetch" href="/assets/js/73.8f267b72.js"><link rel="prefetch" href="/assets/js/74.01ccdeab.js"><link rel="prefetch" href="/assets/js/75.01d4ab49.js"><link rel="prefetch" href="/assets/js/76.a90a2120.js"><link rel="prefetch" href="/assets/js/8.a89bdf2e.js"><link rel="prefetch" href="/assets/js/9.3cd764a1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f52552f8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Yisen的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          VUE
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ele-01/" class="nav-link">
+  element源码学习
+</a></li><li class="dropdown-subitem"><a href="/vue-analysis/" class="nav-link">
+  Vue.js 技术揭秘
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端杂记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zaji-09/" class="nav-link">
+  从零开发一个node命令行工具
+</a></li><li class="dropdown-subitem"><a href="/zaji-08/" class="nav-link">
+  vscode调试webpack
+</a></li><li class="dropdown-subitem"><a href="/zaji-07/" class="nav-link">
+  provisional headers are shown 知多少
+</a></li><li class="dropdown-subitem"><a href="/zaji-06/" class="nav-link">
+  浏览器解析和渲染
+</a></li><li class="dropdown-subitem"><a href="/zaji-05/" class="nav-link">
+  markdown-it插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-04/" class="nav-link">
+  uppercamelcase插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-03/" class="nav-link">
+  json-templater/string插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-02/" class="nav-link">
+  postcss.parse()方法
+</a></li><li class="dropdown-subitem"><a href="/zaji-01/" class="nav-link">
+  shell中&amp;&amp;和&amp;的区别
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript深入
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js-prototype/" class="nav-link">
+  详解JS原型链与继承
+</a></li><li class="dropdown-subitem"><a href="/js-scope/" class="nav-link">
+  词法作用域和动态作用域
+</a></li><li class="dropdown-subitem"><a href="/js-instanceof/" class="nav-link">
+  instanceof运算符深入剖析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CSS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css-01/" class="nav-link">
+  什么是BFC
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://YisenFE.github.io/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/YisenFE/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          VUE
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ele-01/" class="nav-link">
+  element源码学习
+</a></li><li class="dropdown-subitem"><a href="/vue-analysis/" class="nav-link">
+  Vue.js 技术揭秘
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端杂记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zaji-09/" class="nav-link">
+  从零开发一个node命令行工具
+</a></li><li class="dropdown-subitem"><a href="/zaji-08/" class="nav-link">
+  vscode调试webpack
+</a></li><li class="dropdown-subitem"><a href="/zaji-07/" class="nav-link">
+  provisional headers are shown 知多少
+</a></li><li class="dropdown-subitem"><a href="/zaji-06/" class="nav-link">
+  浏览器解析和渲染
+</a></li><li class="dropdown-subitem"><a href="/zaji-05/" class="nav-link">
+  markdown-it插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-04/" class="nav-link">
+  uppercamelcase插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-03/" class="nav-link">
+  json-templater/string插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-02/" class="nav-link">
+  postcss.parse()方法
+</a></li><li class="dropdown-subitem"><a href="/zaji-01/" class="nav-link">
+  shell中&amp;&amp;和&amp;的区别
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript深入
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js-prototype/" class="nav-link">
+  详解JS原型链与继承
+</a></li><li class="dropdown-subitem"><a href="/js-scope/" class="nav-link">
+  词法作用域和动态作用域
+</a></li><li class="dropdown-subitem"><a href="/js-instanceof/" class="nav-link">
+  instanceof运算符深入剖析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CSS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css-01/" class="nav-link">
+  什么是BFC
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://YisenFE.github.io/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/YisenFE/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>element源码学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ele-01/" class="sidebar-link">element:初识</a></li><li><a href="/ele-02/" aria-current="page" class="active sidebar-link">element:执行dev脚本</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ele-02/#执行npm-run-dev" class="sidebar-link">执行npm run dev</a></li><li class="sidebar-sub-header"><a href="/ele-02/#npm-run-build-file" class="sidebar-link">npm run build:file</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ele-02/#node-build-bin-iconinit-js" class="sidebar-link">node build/bin/iconInit.js</a></li><li class="sidebar-sub-header"><a href="/ele-02/#node-build-bin-build-entry-js" class="sidebar-link">node build/bin/build-entry.js</a></li><li class="sidebar-sub-header"><a href="/ele-02/#node-build-bin-i18n-js" class="sidebar-link">node build/bin/i18n.js</a></li><li class="sidebar-sub-header"><a href="/ele-02/#cross-env" class="sidebar-link">cross-env</a></li><li class="sidebar-sub-header"><a href="/ele-02/#webpack-dev-server" class="sidebar-link">webpack-dev-server</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h4 id=""><a href="#" class="header-anchor">#</a></h4> <h2 id="执行npm-run-dev"><a href="#执行npm-run-dev" class="header-anchor">#</a> 执行<code>npm run dev</code></h2> <div class="language-json line-numbers-mode"><pre class="language-json"><code> <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run bootstrap &amp;&amp; npm run build:file &amp;&amp; cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js &amp; node build/bin/template.js&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>npm run dev</code> 命令做了以下几件事：</p> <ol><li><code>npm run bootstrap</code> 脚本命令，安装所有依赖</li> <li>安装完所有依赖后，执行 <a href="/ele-02/#npm-run-build-file"><code>npm run build:file</code></a> 脚本命令</li> <li>上述命令执行完毕后 <code>cross-env</code> 插件设置环境变量，然后 <code>webpack</code> 起服务</li> <li>执行 <code>node build/bin/template.js</code></li></ol></div> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><a href="/zaji-01/">了解<code>shell</code> 中 <code>&amp;&amp;</code> 和 <code>&amp;</code> 的区别，请点此链接</a></p></div> <h2 id="npm-run-build-file"><a href="#npm-run-build-file" class="header-anchor">#</a> npm run build:file</h2> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token property">&quot;build:file&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node build/bin/iconInit.js &amp; node build/bin/build-entry.js &amp; node build/bin/i18n.js &amp; node build/bin/version.js&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>使用node运行了几个文件，下面我们一个个分析每个文件都做了啥</p></div> <h3 id="node-build-bin-iconinit-js"><a href="#node-build-bin-iconinit-js" class="header-anchor">#</a> <code>node build/bin/iconInit.js</code></h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// build/bin/iconInit.js</span>
+<span class="token string">'use strict'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> postcss <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'postcss'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> fontFile <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../packages/theme-chalk/src/icon.scss'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 异步读取文件</span>
+<span class="token keyword">var</span> nodes <span class="token operator">=</span> postcss<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>fontFile<span class="token punctuation">)</span><span class="token punctuation">.</span>nodes<span class="token punctuation">;</span>
+<span class="token keyword">var</span> classList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+nodes<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">node</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> selector <span class="token operator">=</span> node<span class="token punctuation">.</span>selector <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">;</span> <span class="token comment">// 选择器</span>
+  <span class="token keyword">var</span> reg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token regex">/\.el-icon-([^:]+):before/</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> arr <span class="token operator">=</span> selector<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>reg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>arr <span class="token operator">&amp;&amp;</span> arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    classList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+classList<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// =&gt; [&quot;platform-eleme&quot;,&quot;eleme&quot;,&quot;delete-solid&quot;,&quot;delete&quot;,&quot;s-tools&quot;,&quot;setting&quot;, ...]</span>
+
+fs<span class="token punctuation">.</span><span class="token function">writeFile</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../examples/icon.json'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>classList<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>以上方法通过解析 icon.scss 最终导出 icon.json 文件，该文件保存了各种图标。</p></div> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><a href="/zaji-02/"><code>postcss.parse()</code> 方法解析，点此链接</a></p></div> <h3 id="node-build-bin-build-entry-js"><a href="#node-build-bin-build-entry-js" class="header-anchor">#</a> <code>node build/bin/build-entry.js</code></h3> <div class="language-js line-numbers-mode"><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><div class="highlighted"> </div><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br></div><pre class="language-js"><code><span class="token comment">// build/bin/build-entry.js</span>
+
+<span class="token keyword">var</span> Components <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../components.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//json文件 {组件名：组件路径} =&gt; {&quot;pagination&quot;: &quot;./packages/pagination/index.js&quot;}</span>
+<span class="token comment">/* Components文件内容
+  {
+    &quot;pagination&quot;: &quot;./packages/pagination/index.js&quot;,
+    &quot;dialog&quot;: &quot;./packages/dialog/index.js&quot;,
+    &quot;autocomplete&quot;: &quot;./packages/autocomplete/index.js&quot;,
+    &quot;dropdown&quot;: &quot;./packages/dropdown/index.js&quot;,
+    &quot;dropdown-menu&quot;: &quot;./packages/dropdown-menu/index.js&quot;,
+    &quot;dropdown-item&quot;: &quot;./packages/dropdown-item/index.js&quot;,
+    &quot;menu&quot;: &quot;./packages/menu/index.js&quot;,
+    ...
+  }
+*/</span>
+<span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> render <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'json-templater/string'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 引入 json 模版生成插件</span>
+<span class="token keyword">var</span> uppercamelcase <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uppercamelcase'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 驼峰</span>
+<span class="token keyword">var</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> endOfLine <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'os'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token constant">EOL</span><span class="token punctuation">;</span> <span class="token comment">// node内置模块（操作系统）=&gt; \r\n</span>
+
+<span class="token comment">// 导出路径</span>
+<span class="token keyword">var</span> <span class="token constant">OUTPUT_PATH</span> <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 导入template、安装组件template、主要template</span>
+<span class="token keyword">var</span> <span class="token constant">IMPORT_TEMPLATE</span> <span class="token operator">=</span> <span class="token string">'import {{name}} from \'../packages/{{package}}/index.js\';'</span><span class="token punctuation">;</span> <span class="token comment">// 引入</span>
+<span class="token keyword">var</span> <span class="token constant">INSTALL_COMPONENT_TEMPLATE</span> <span class="token operator">=</span> <span class="token string">'  {{name}}'</span><span class="token punctuation">;</span> <span class="token comment">// 模块名</span>
+<span class="token keyword">var</span> <span class="token constant">MAIN_TEMPLATE</span> <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/* Automatically generated by './build/bin/build-entry.js' */
+
+{{include}}
+import locale from 'element-ui/src/locale';
+import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
+
+const components = [
+{{install}},
+  CollapseTransition
+];
+
+const install = function(Vue, opts = {}) {
+  locale.use(opts.locale);
+  locale.i18n(opts.i18n);
+
+  components.forEach(component =&gt; {
+    Vue.component(component.name, component);
+  });
+
+  Vue.use(InfiniteScroll);
+  Vue.use(Loading.directive);
+
+  Vue.prototype.$ELEMENT = {
+    size: opts.size || '',
+    zIndex: opts.zIndex || 2000
+  };
+
+  Vue.prototype.$loading = Loading.service;
+  Vue.prototype.$msgbox = MessageBox;
+  Vue.prototype.$alert = MessageBox.alert;
+  Vue.prototype.$confirm = MessageBox.confirm;
+  Vue.prototype.$prompt = MessageBox.prompt;
+  Vue.prototype.$notify = Notification;
+  Vue.prototype.$message = Message;
+
+};
+
+/* istanbul ignore if */
+if (typeof window !== 'undefined' &amp;&amp; window.Vue) {
+  install(window.Vue);
+}
+
+export default {
+  version: '{{version}}',
+  locale: locale.use,
+  i18n: locale.i18n,
+  install,
+  CollapseTransition,
+  Loading,
+{{list}}
+};
+</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">/** MAIN_TEMPLATE 主模版中：
+ *    {{name}}    - 组件名（模块名）
+ *    {{package}} - 文件名
+ *    {{include}} - import语法模版
+ *    {{install}} - 组件名（模块名）
+ *    {{version}} - 版本号
+ *    {{list}}    - 组件名（模块名）
+ *  需要render函数去处理
+ * */</span>
+
+<span class="token keyword">delete</span> Components<span class="token punctuation">.</span>font<span class="token punctuation">;</span>
+
+<span class="token comment">// 组件名</span>
+<span class="token keyword">var</span> ComponentNames <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>Components<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// include 模版，用于替换 {{include}}</span>
+<span class="token keyword">var</span> includeComponentTemplate <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// install 模版，用于替换 {{install}}</span>
+<span class="token keyword">var</span> installTemplate <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment">// list 模版，用于替换 {{list}}</span>
+<span class="token keyword">var</span> listTemplate <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 遍历组件名解析template</span>
+ComponentNames<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">name</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> componentName <span class="token operator">=</span> <span class="token function">uppercamelcase</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// 转化为驼峰命名</span>
+
+  includeComponentTemplate<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token constant">IMPORT_TEMPLATE</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> componentName<span class="token punctuation">,</span> <span class="token comment">// 组件名</span>
+    <span class="token keyword">package</span><span class="token operator">:</span> name <span class="token comment">// 包名（文件名）</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Loading'</span><span class="token punctuation">,</span> <span class="token string">'MessageBox'</span><span class="token punctuation">,</span> <span class="token string">'Notification'</span><span class="token punctuation">,</span> <span class="token string">'Message'</span><span class="token punctuation">,</span> <span class="token string">'InfiniteScroll'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>componentName<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    installTemplate<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token constant">INSTALL_COMPONENT_TEMPLATE</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      name<span class="token operator">:</span> componentName<span class="token punctuation">,</span>
+      component<span class="token operator">:</span> name
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>componentName <span class="token operator">!==</span> <span class="token string">'Loading'</span><span class="token punctuation">)</span> listTemplate<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">  </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>componentName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 主要template</span>
+<span class="token keyword">var</span> template <span class="token operator">=</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token constant">MAIN_TEMPLATE</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  include<span class="token operator">:</span> includeComponentTemplate<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>endOfLine<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  install<span class="token operator">:</span> installTemplate<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span> <span class="token operator">+</span> endOfLine<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  version<span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VERSION</span> <span class="token operator">||</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../package.json'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>version<span class="token punctuation">,</span>
+  list<span class="token operator">:</span> listTemplate<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">','</span> <span class="token operator">+</span> endOfLine<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 导出文件</span>
+fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span><span class="token constant">OUTPUT_PATH</span><span class="token punctuation">,</span> template<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'[build entry] DONE:'</span><span class="token punctuation">,</span> <span class="token constant">OUTPUT_PATH</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>为了增加可维护性，自动构建入口文件，未来如果需要新增组件，就不用频繁改动入口文件。</p></div> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><a href="/zaji-03/"><code>json-templater/string</code> 插件用法，点此链接</a></p> <p><a href="/zaji-04/"><code>uppercamelcase</code> 插件用法，点此链接</a></p></div> <h3 id="node-build-bin-i18n-js"><a href="#node-build-bin-i18n-js" class="header-anchor">#</a> <code>node build/bin/i18n.js</code></h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> langConfig <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../examples/i18n/page.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+langConfig<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">lang</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 有目录读取目录信息，没有目录创建目录</span>
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取文件信息</span>
+    fs<span class="token punctuation">.</span><span class="token function">statSync</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">../../examples/pages/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> lang<span class="token punctuation">.</span>lang <span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 同步提供有关文件信息</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 创建文件夹</span>
+    fs<span class="token punctuation">.</span><span class="token function">mkdirSync</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">../../examples/pages/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> lang<span class="token punctuation">.</span>lang <span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 同步地创建目录</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 遍历写入文件</span>
+  Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>lang<span class="token punctuation">.</span>pages<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">page</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> templatePath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">../../examples/pages/template/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> page <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.tpl</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> outputPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">../../examples/pages/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> lang<span class="token punctuation">.</span>lang <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> page <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.vue</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>templatePath<span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> pairs <span class="token operator">=</span> lang<span class="token punctuation">.</span>pages<span class="token punctuation">[</span>page<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>pairs<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">key</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 例如：匹配 &lt;%= 1 %&gt; 替换成展示内容</span>
+      content <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;%=\\s*</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span> key <span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">\\s*&gt;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token string">'g'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> pairs<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 将替换后的内容写入 outputPath 中</span>
+    fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>outputPath<span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><blockquote><p>以上代码是国际化的过程，最终将会在 <code>examples/pages/</code> 目录中生成不同语言的内容。国际化具体内容请参照 <a href="http://element-cn.eleme.io/#/zh-CN/component/i18n" target="_blank" rel="noopener noreferrer">国际化<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <p>pages里的组件都是页面级组件</p></blockquote> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>通过json数据，将 tpl 模版动态的编译为 .vue 文件。</p> <p>优点：</p> <p>只需写一套模版，就能实现国际化 API。</p></div> <h3 id="cross-env"><a href="#cross-env" class="header-anchor">#</a> <code>cross-env</code></h3> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>cross-env <span class="token assign-left variable">NODE_ENV</span><span class="token operator">=</span>development
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>写入环境变量</p> <p>在 webpack 配置文件中通过 <code>process.env.NODE_ENV</code> 拿到环境变量</p></div> <h3 id="webpack-dev-server"><a href="#webpack-dev-server" class="header-anchor">#</a> webpack-dev-server</h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>由于 webpack 打包，本篇不做介绍，详见<a href="/ele-03/">webpack打包过程</a></p></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/YisenFE/blogs/edit/master/docs/VUE学习/elementUI/02-执行dev脚本.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">1/14/2020, 11:14:12 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/ele-01/" class="prev">
+        element:初识
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----><!----><div></div></div></div>
+    <script src="/assets/js/app.d27cd32c.js" defer></script><script src="/assets/js/2.92947368.js" defer></script><script src="/assets/js/16.906d6d4a.js" defer></script><script src="/assets/js/4.47214791.js" defer></script>
+  </body>
+</html>

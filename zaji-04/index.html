@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>uppercamelcase 插件 | Yisen的博客</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="shortcut icon" href="/img/shi.jpg">
+    <meta name="description" content="每一件事都要做到精彩绝伦!">
+    <link rel="preload" href="/assets/css/0.styles.f52552f8.css" as="style"><link rel="preload" href="/assets/js/app.d27cd32c.js" as="script"><link rel="preload" href="/assets/js/2.92947368.js" as="script"><link rel="preload" href="/assets/js/73.8f267b72.js" as="script"><link rel="preload" href="/assets/js/4.47214791.js" as="script"><link rel="prefetch" href="/assets/js/10.b84025ed.js"><link rel="prefetch" href="/assets/js/11.7c58c5d6.js"><link rel="prefetch" href="/assets/js/12.de2d8102.js"><link rel="prefetch" href="/assets/js/13.fe377b65.js"><link rel="prefetch" href="/assets/js/14.f1cd7aa2.js"><link rel="prefetch" href="/assets/js/15.4f75d4bb.js"><link rel="prefetch" href="/assets/js/16.906d6d4a.js"><link rel="prefetch" href="/assets/js/17.d95554d5.js"><link rel="prefetch" href="/assets/js/18.9dede249.js"><link rel="prefetch" href="/assets/js/19.0621538b.js"><link rel="prefetch" href="/assets/js/20.13e018e3.js"><link rel="prefetch" href="/assets/js/21.e4a06620.js"><link rel="prefetch" href="/assets/js/22.59f52ec6.js"><link rel="prefetch" href="/assets/js/23.4375f24d.js"><link rel="prefetch" href="/assets/js/24.60cdd050.js"><link rel="prefetch" href="/assets/js/25.4d704b8b.js"><link rel="prefetch" href="/assets/js/26.e631c778.js"><link rel="prefetch" href="/assets/js/27.d89a92fd.js"><link rel="prefetch" href="/assets/js/28.9fb2b865.js"><link rel="prefetch" href="/assets/js/29.e6c33b9a.js"><link rel="prefetch" href="/assets/js/3.74592acf.js"><link rel="prefetch" href="/assets/js/30.5072f4fc.js"><link rel="prefetch" href="/assets/js/31.3788aee1.js"><link rel="prefetch" href="/assets/js/32.6dca2967.js"><link rel="prefetch" href="/assets/js/33.d4f526b6.js"><link rel="prefetch" href="/assets/js/34.85f6fbec.js"><link rel="prefetch" href="/assets/js/35.c3af1511.js"><link rel="prefetch" href="/assets/js/36.e5984d80.js"><link rel="prefetch" href="/assets/js/37.665a9578.js"><link rel="prefetch" href="/assets/js/38.21ba26ad.js"><link rel="prefetch" href="/assets/js/39.0a876c87.js"><link rel="prefetch" href="/assets/js/40.89e82318.js"><link rel="prefetch" href="/assets/js/41.2a85a586.js"><link rel="prefetch" href="/assets/js/42.364f1105.js"><link rel="prefetch" href="/assets/js/43.b7afe916.js"><link rel="prefetch" href="/assets/js/44.45cc108b.js"><link rel="prefetch" href="/assets/js/45.8e8c0e3e.js"><link rel="prefetch" href="/assets/js/46.aec4a7c6.js"><link rel="prefetch" href="/assets/js/47.16de224f.js"><link rel="prefetch" href="/assets/js/48.1764fd61.js"><link rel="prefetch" href="/assets/js/49.996c2583.js"><link rel="prefetch" href="/assets/js/5.3113bf0c.js"><link rel="prefetch" href="/assets/js/50.e7e0b373.js"><link rel="prefetch" href="/assets/js/51.1e509337.js"><link rel="prefetch" href="/assets/js/52.9614344e.js"><link rel="prefetch" href="/assets/js/53.2888eeac.js"><link rel="prefetch" href="/assets/js/54.8e6da259.js"><link rel="prefetch" href="/assets/js/55.a19f7f2c.js"><link rel="prefetch" href="/assets/js/56.2ca5e5ed.js"><link rel="prefetch" href="/assets/js/57.bd9f18b7.js"><link rel="prefetch" href="/assets/js/58.ba151f1c.js"><link rel="prefetch" href="/assets/js/59.5fbb5939.js"><link rel="prefetch" href="/assets/js/6.7265dd24.js"><link rel="prefetch" href="/assets/js/60.81acd1a4.js"><link rel="prefetch" href="/assets/js/61.f7a24079.js"><link rel="prefetch" href="/assets/js/62.9bceffe9.js"><link rel="prefetch" href="/assets/js/63.e8e639ce.js"><link rel="prefetch" href="/assets/js/64.acff45e3.js"><link rel="prefetch" href="/assets/js/65.10d11424.js"><link rel="prefetch" href="/assets/js/66.f0145b9b.js"><link rel="prefetch" href="/assets/js/67.696da77d.js"><link rel="prefetch" href="/assets/js/68.7e5cd622.js"><link rel="prefetch" href="/assets/js/69.1d5a4b4b.js"><link rel="prefetch" href="/assets/js/7.4fd397db.js"><link rel="prefetch" href="/assets/js/70.6f77d1a2.js"><link rel="prefetch" href="/assets/js/71.221c9a4e.js"><link rel="prefetch" href="/assets/js/72.22c63902.js"><link rel="prefetch" href="/assets/js/74.01ccdeab.js"><link rel="prefetch" href="/assets/js/75.01d4ab49.js"><link rel="prefetch" href="/assets/js/76.a90a2120.js"><link rel="prefetch" href="/assets/js/8.a89bdf2e.js"><link rel="prefetch" href="/assets/js/9.3cd764a1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f52552f8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Yisen的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          VUE
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ele-01/" class="nav-link">
+  element源码学习
+</a></li><li class="dropdown-subitem"><a href="/vue-analysis/" class="nav-link">
+  Vue.js 技术揭秘
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端杂记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zaji-09/" class="nav-link">
+  从零开发一个node命令行工具
+</a></li><li class="dropdown-subitem"><a href="/zaji-08/" class="nav-link">
+  vscode调试webpack
+</a></li><li class="dropdown-subitem"><a href="/zaji-07/" class="nav-link">
+  provisional headers are shown 知多少
+</a></li><li class="dropdown-subitem"><a href="/zaji-06/" class="nav-link">
+  浏览器解析和渲染
+</a></li><li class="dropdown-subitem"><a href="/zaji-05/" class="nav-link">
+  markdown-it插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-04/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  uppercamelcase插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-03/" class="nav-link">
+  json-templater/string插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-02/" class="nav-link">
+  postcss.parse()方法
+</a></li><li class="dropdown-subitem"><a href="/zaji-01/" class="nav-link">
+  shell中&amp;&amp;和&amp;的区别
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript深入
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js-prototype/" class="nav-link">
+  详解JS原型链与继承
+</a></li><li class="dropdown-subitem"><a href="/js-scope/" class="nav-link">
+  词法作用域和动态作用域
+</a></li><li class="dropdown-subitem"><a href="/js-instanceof/" class="nav-link">
+  instanceof运算符深入剖析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CSS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css-01/" class="nav-link">
+  什么是BFC
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://YisenFE.github.io/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/YisenFE/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          VUE
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ele-01/" class="nav-link">
+  element源码学习
+</a></li><li class="dropdown-subitem"><a href="/vue-analysis/" class="nav-link">
+  Vue.js 技术揭秘
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端杂记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zaji-09/" class="nav-link">
+  从零开发一个node命令行工具
+</a></li><li class="dropdown-subitem"><a href="/zaji-08/" class="nav-link">
+  vscode调试webpack
+</a></li><li class="dropdown-subitem"><a href="/zaji-07/" class="nav-link">
+  provisional headers are shown 知多少
+</a></li><li class="dropdown-subitem"><a href="/zaji-06/" class="nav-link">
+  浏览器解析和渲染
+</a></li><li class="dropdown-subitem"><a href="/zaji-05/" class="nav-link">
+  markdown-it插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-04/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  uppercamelcase插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-03/" class="nav-link">
+  json-templater/string插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-02/" class="nav-link">
+  postcss.parse()方法
+</a></li><li class="dropdown-subitem"><a href="/zaji-01/" class="nav-link">
+  shell中&amp;&amp;和&amp;的区别
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript深入
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js-prototype/" class="nav-link">
+  详解JS原型链与继承
+</a></li><li class="dropdown-subitem"><a href="/js-scope/" class="nav-link">
+  词法作用域和动态作用域
+</a></li><li class="dropdown-subitem"><a href="/js-instanceof/" class="nav-link">
+  instanceof运算符深入剖析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CSS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css-01/" class="nav-link">
+  什么是BFC
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://YisenFE.github.io/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/YisenFE/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>前端杂记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zaji-09/" class="sidebar-link">从零开发一个node命令行工具</a></li><li><a href="/zaji-08/" class="sidebar-link">vscode调试webpack</a></li><li><a href="/zaji-07/" class="sidebar-link">provisional headers are shown 知多少</a></li><li><a href="/zaji-06/" class="sidebar-link">浏览器解析和渲染</a></li><li><a href="/zaji-05/" class="sidebar-link">markdown-it 插件</a></li><li><a href="/zaji-04/" aria-current="page" class="active sidebar-link">uppercamelcase 插件</a></li><li><a href="/zaji-03/" class="sidebar-link">json-templater/string 插件</a></li><li><a href="/zaji-02/" class="sidebar-link">postcss.parse()方法</a></li><li><a href="/zaji-01/" class="sidebar-link">shell 中 &amp;&amp; 和 &amp; 的区别</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="uppercamelcase-插件"><a href="#uppercamelcase-插件" class="header-anchor">#</a> uppercamelcase 插件</h1> <div class="custom-block danger"><p class="custom-block-title">WARNING</p> <p>仅介绍此插件在 <code>element</code> 中的用法</p> <p>详细用法请移步<a href="https://www.npmjs.com/package/uppercamelcase" target="_blank" rel="noopener noreferrer">官方API<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>uppercamelcase</code> 可以在js和json对象上进行胡子样式模板替换</p></div> <ol><li>先搭建环境</li></ol> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>$ <span class="token function">npm</span> init -y <span class="token operator">&amp;&amp;</span> <span class="token function">npm</span> i -D webpack webpack-cli uppercamelcase <span class="token operator">&amp;&amp;</span> <span class="token function">touch</span> index.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="2"><li>index.js 文件内容：</li></ol> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">let</span> upperCamelCase <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'uppercamelcase'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> case1 <span class="token operator">=</span> <span class="token function">upperCamelCase</span><span class="token punctuation">(</span><span class="token string">'foo-bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> case2 <span class="token operator">=</span> <span class="token function">upperCamelCase</span><span class="token punctuation">(</span><span class="token string">'foo_bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> case3 <span class="token operator">=</span> <span class="token function">upperCamelCase</span><span class="token punctuation">(</span><span class="token string">'Foo-Bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> case4 <span class="token operator">=</span> <span class="token function">upperCamelCase</span><span class="token punctuation">(</span><span class="token string">'--foo.bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> case5 <span class="token operator">=</span> <span class="token function">upperCamelCase</span><span class="token punctuation">(</span><span class="token string">'__foo__bar__'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> case6 <span class="token operator">=</span> <span class="token function">upperCamelCase</span><span class="token punctuation">(</span><span class="token string">'foo bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> case7 <span class="token operator">=</span> <span class="token function">upperCamelCase</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token string">'bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> case8 <span class="token operator">=</span> <span class="token function">upperCamelCase</span><span class="token punctuation">(</span><span class="token string">'__foo__'</span><span class="token punctuation">,</span> <span class="token string">'--bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'-----------------------------------------------------'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo-bar =&gt;                   '</span> <span class="token operator">+</span> case1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo_bar =&gt;                   '</span> <span class="token operator">+</span> case2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Foo-Bar =&gt;                   '</span> <span class="token operator">+</span> case3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'--foo.bar =&gt;                 '</span> <span class="token operator">+</span> case4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'__foo__bar__ =&gt;              '</span> <span class="token operator">+</span> case5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'foo bar =&gt;                   '</span> <span class="token operator">+</span> case6<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'params:[foo, bar] =&gt;         '</span> <span class="token operator">+</span> case7<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'params:[__foo__, --bar] =&gt;   '</span> <span class="token operator">+</span> case8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'-----------------------------------------------------'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><ol start="3"><li>执行<code>node index.js</code>
+输出：</li></ol> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
+foo<span class="token operator">-</span><span class="token parameter">bar</span> <span class="token operator">=&gt;</span>                   FooBar
+<span class="token parameter">foo_bar</span> <span class="token operator">=&gt;</span>                   FooBar
+Foo<span class="token operator">-</span><span class="token parameter">Bar</span> <span class="token operator">=&gt;</span>                   FooBar
+<span class="token operator">--</span>foo<span class="token punctuation">.</span><span class="token parameter">bar</span> <span class="token operator">=&gt;</span>                 FooBar
+<span class="token parameter">__foo__bar__</span> <span class="token operator">=&gt;</span>              FooBar
+foo <span class="token parameter">bar</span> <span class="token operator">=&gt;</span>                   FooBar
+params<span class="token operator">:</span><span class="token punctuation">[</span>foo<span class="token punctuation">,</span> bar<span class="token punctuation">]</span> <span class="token operator">=&gt;</span>         FooBar
+params<span class="token operator">:</span><span class="token punctuation">[</span>__foo__<span class="token punctuation">,</span> <span class="token operator">--</span>bar<span class="token punctuation">]</span> <span class="token operator">=&gt;</span>   FooBar
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><a href="/ele-02/#node-build-bin-build-entry-js">查看在 <code>element</code> 中如何使用，请点此链接</a></p></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/YisenFE/blogs/edit/master/docs/前端杂记/uppercamelcase插件.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">7/24/2019, 10:45:45 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/zaji-05/" class="prev">
+        markdown-it 插件
+      </a></span> <span class="next"><a href="/zaji-03/">
+        json-templater/string 插件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><div></div></div></div>
+    <script src="/assets/js/app.d27cd32c.js" defer></script><script src="/assets/js/2.92947368.js" defer></script><script src="/assets/js/73.8f267b72.js" defer></script><script src="/assets/js/4.47214791.js" defer></script>
+  </body>
+</html>

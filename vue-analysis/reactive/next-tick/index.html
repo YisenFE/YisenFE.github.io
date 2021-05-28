@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nextTick | Yisen的博客</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="shortcut icon" href="/img/shi.jpg">
+    <meta name="description" content="每一件事都要做到精彩绝伦!">
+    <link rel="preload" href="/assets/css/0.styles.f52552f8.css" as="style"><link rel="preload" href="/assets/js/app.d27cd32c.js" as="script"><link rel="preload" href="/assets/js/2.92947368.js" as="script"><link rel="preload" href="/assets/js/49.996c2583.js" as="script"><link rel="preload" href="/assets/js/4.47214791.js" as="script"><link rel="prefetch" href="/assets/js/10.b84025ed.js"><link rel="prefetch" href="/assets/js/11.7c58c5d6.js"><link rel="prefetch" href="/assets/js/12.de2d8102.js"><link rel="prefetch" href="/assets/js/13.fe377b65.js"><link rel="prefetch" href="/assets/js/14.f1cd7aa2.js"><link rel="prefetch" href="/assets/js/15.4f75d4bb.js"><link rel="prefetch" href="/assets/js/16.906d6d4a.js"><link rel="prefetch" href="/assets/js/17.d95554d5.js"><link rel="prefetch" href="/assets/js/18.9dede249.js"><link rel="prefetch" href="/assets/js/19.0621538b.js"><link rel="prefetch" href="/assets/js/20.13e018e3.js"><link rel="prefetch" href="/assets/js/21.e4a06620.js"><link rel="prefetch" href="/assets/js/22.59f52ec6.js"><link rel="prefetch" href="/assets/js/23.4375f24d.js"><link rel="prefetch" href="/assets/js/24.60cdd050.js"><link rel="prefetch" href="/assets/js/25.4d704b8b.js"><link rel="prefetch" href="/assets/js/26.e631c778.js"><link rel="prefetch" href="/assets/js/27.d89a92fd.js"><link rel="prefetch" href="/assets/js/28.9fb2b865.js"><link rel="prefetch" href="/assets/js/29.e6c33b9a.js"><link rel="prefetch" href="/assets/js/3.74592acf.js"><link rel="prefetch" href="/assets/js/30.5072f4fc.js"><link rel="prefetch" href="/assets/js/31.3788aee1.js"><link rel="prefetch" href="/assets/js/32.6dca2967.js"><link rel="prefetch" href="/assets/js/33.d4f526b6.js"><link rel="prefetch" href="/assets/js/34.85f6fbec.js"><link rel="prefetch" href="/assets/js/35.c3af1511.js"><link rel="prefetch" href="/assets/js/36.e5984d80.js"><link rel="prefetch" href="/assets/js/37.665a9578.js"><link rel="prefetch" href="/assets/js/38.21ba26ad.js"><link rel="prefetch" href="/assets/js/39.0a876c87.js"><link rel="prefetch" href="/assets/js/40.89e82318.js"><link rel="prefetch" href="/assets/js/41.2a85a586.js"><link rel="prefetch" href="/assets/js/42.364f1105.js"><link rel="prefetch" href="/assets/js/43.b7afe916.js"><link rel="prefetch" href="/assets/js/44.45cc108b.js"><link rel="prefetch" href="/assets/js/45.8e8c0e3e.js"><link rel="prefetch" href="/assets/js/46.aec4a7c6.js"><link rel="prefetch" href="/assets/js/47.16de224f.js"><link rel="prefetch" href="/assets/js/48.1764fd61.js"><link rel="prefetch" href="/assets/js/5.3113bf0c.js"><link rel="prefetch" href="/assets/js/50.e7e0b373.js"><link rel="prefetch" href="/assets/js/51.1e509337.js"><link rel="prefetch" href="/assets/js/52.9614344e.js"><link rel="prefetch" href="/assets/js/53.2888eeac.js"><link rel="prefetch" href="/assets/js/54.8e6da259.js"><link rel="prefetch" href="/assets/js/55.a19f7f2c.js"><link rel="prefetch" href="/assets/js/56.2ca5e5ed.js"><link rel="prefetch" href="/assets/js/57.bd9f18b7.js"><link rel="prefetch" href="/assets/js/58.ba151f1c.js"><link rel="prefetch" href="/assets/js/59.5fbb5939.js"><link rel="prefetch" href="/assets/js/6.7265dd24.js"><link rel="prefetch" href="/assets/js/60.81acd1a4.js"><link rel="prefetch" href="/assets/js/61.f7a24079.js"><link rel="prefetch" href="/assets/js/62.9bceffe9.js"><link rel="prefetch" href="/assets/js/63.e8e639ce.js"><link rel="prefetch" href="/assets/js/64.acff45e3.js"><link rel="prefetch" href="/assets/js/65.10d11424.js"><link rel="prefetch" href="/assets/js/66.f0145b9b.js"><link rel="prefetch" href="/assets/js/67.696da77d.js"><link rel="prefetch" href="/assets/js/68.7e5cd622.js"><link rel="prefetch" href="/assets/js/69.1d5a4b4b.js"><link rel="prefetch" href="/assets/js/7.4fd397db.js"><link rel="prefetch" href="/assets/js/70.6f77d1a2.js"><link rel="prefetch" href="/assets/js/71.221c9a4e.js"><link rel="prefetch" href="/assets/js/72.22c63902.js"><link rel="prefetch" href="/assets/js/73.8f267b72.js"><link rel="prefetch" href="/assets/js/74.01ccdeab.js"><link rel="prefetch" href="/assets/js/75.01d4ab49.js"><link rel="prefetch" href="/assets/js/76.a90a2120.js"><link rel="prefetch" href="/assets/js/8.a89bdf2e.js"><link rel="prefetch" href="/assets/js/9.3cd764a1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f52552f8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Yisen的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          VUE
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ele-01/" class="nav-link">
+  element源码学习
+</a></li><li class="dropdown-subitem"><a href="/vue-analysis/" class="nav-link router-link-active">
+  Vue.js 技术揭秘
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端杂记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zaji-09/" class="nav-link">
+  从零开发一个node命令行工具
+</a></li><li class="dropdown-subitem"><a href="/zaji-08/" class="nav-link">
+  vscode调试webpack
+</a></li><li class="dropdown-subitem"><a href="/zaji-07/" class="nav-link">
+  provisional headers are shown 知多少
+</a></li><li class="dropdown-subitem"><a href="/zaji-06/" class="nav-link">
+  浏览器解析和渲染
+</a></li><li class="dropdown-subitem"><a href="/zaji-05/" class="nav-link">
+  markdown-it插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-04/" class="nav-link">
+  uppercamelcase插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-03/" class="nav-link">
+  json-templater/string插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-02/" class="nav-link">
+  postcss.parse()方法
+</a></li><li class="dropdown-subitem"><a href="/zaji-01/" class="nav-link">
+  shell中&amp;&amp;和&amp;的区别
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript深入
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js-prototype/" class="nav-link">
+  详解JS原型链与继承
+</a></li><li class="dropdown-subitem"><a href="/js-scope/" class="nav-link">
+  词法作用域和动态作用域
+</a></li><li class="dropdown-subitem"><a href="/js-instanceof/" class="nav-link">
+  instanceof运算符深入剖析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CSS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css-01/" class="nav-link">
+  什么是BFC
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://YisenFE.github.io/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/YisenFE/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          VUE
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ele-01/" class="nav-link">
+  element源码学习
+</a></li><li class="dropdown-subitem"><a href="/vue-analysis/" class="nav-link router-link-active">
+  Vue.js 技术揭秘
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端杂记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zaji-09/" class="nav-link">
+  从零开发一个node命令行工具
+</a></li><li class="dropdown-subitem"><a href="/zaji-08/" class="nav-link">
+  vscode调试webpack
+</a></li><li class="dropdown-subitem"><a href="/zaji-07/" class="nav-link">
+  provisional headers are shown 知多少
+</a></li><li class="dropdown-subitem"><a href="/zaji-06/" class="nav-link">
+  浏览器解析和渲染
+</a></li><li class="dropdown-subitem"><a href="/zaji-05/" class="nav-link">
+  markdown-it插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-04/" class="nav-link">
+  uppercamelcase插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-03/" class="nav-link">
+  json-templater/string插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-02/" class="nav-link">
+  postcss.parse()方法
+</a></li><li class="dropdown-subitem"><a href="/zaji-01/" class="nav-link">
+  shell中&amp;&amp;和&amp;的区别
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript深入
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js-prototype/" class="nav-link">
+  详解JS原型链与继承
+</a></li><li class="dropdown-subitem"><a href="/js-scope/" class="nav-link">
+  词法作用域和动态作用域
+</a></li><li class="dropdown-subitem"><a href="/js-instanceof/" class="nav-link">
+  instanceof运算符深入剖析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CSS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css-01/" class="nav-link">
+  什么是BFC
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://YisenFE.github.io/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/YisenFE/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue.js 技术揭秘</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/" aria-current="page" class="sidebar-link">介绍</a></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>准备工作</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/prepare/" class="sidebar-link">Introduction</a></li><li><a href="/vue-analysis/prepare/flow/" class="sidebar-link">认识 Flow</a></li><li><a href="/vue-analysis/prepare/directory/" class="sidebar-link">Vue.js 源码目录设计</a></li><li><a href="/vue-analysis/prepare/build/" class="sidebar-link">Vue.js 源码构建</a></li><li><a href="/vue-analysis/prepare/entry/" class="sidebar-link">从入口开始</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>数据驱动</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/data-driven/" class="sidebar-link">Introduction</a></li><li><a href="/vue-analysis/data-driven/new-vue/" class="sidebar-link">new Vue 发生了什么</a></li><li><a href="/vue-analysis/data-driven/mounted/" class="sidebar-link">Vue 实例挂载的实现</a></li><li><a href="/vue-analysis/data-driven/render/" class="sidebar-link">render</a></li><li><a href="/vue-analysis/data-driven/virtual-dom/" class="sidebar-link">Virtual DOM</a></li><li><a href="/vue-analysis/data-driven/create-element/" class="sidebar-link">createElement</a></li><li><a href="/vue-analysis/data-driven/update/" class="sidebar-link">update</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>组件化</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/components/" class="sidebar-link">Introduction</a></li><li><a href="/vue-analysis/components/create-component/" class="sidebar-link">createComponent</a></li><li><a href="/vue-analysis/components/patch/" class="sidebar-link">patch</a></li><li><a href="/vue-analysis/components/merge-option/" class="sidebar-link">合并配置</a></li><li><a href="/vue-analysis/components/lifecycle/" class="sidebar-link">生命周期</a></li><li><a href="/vue-analysis/components/component-register/" class="sidebar-link">组件注册</a></li><li><a href="/vue-analysis/components/async-component/" class="sidebar-link">异步组件</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>深入响应式原理</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/reactive/" aria-current="page" class="sidebar-link">Introduction</a></li><li><a href="/vue-analysis/reactive/reactive-object/" class="sidebar-link">响应式对象</a></li><li><a href="/vue-analysis/reactive/getters/" class="sidebar-link">依赖收集</a></li><li><a href="/vue-analysis/reactive/setters/" class="sidebar-link">派发更新</a></li><li><a href="/vue-analysis/reactive/next-tick/" aria-current="page" class="active sidebar-link">nextTick</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue-analysis/reactive/next-tick/#js-运行机制" class="sidebar-link">JS 运行机制</a></li><li class="sidebar-sub-header"><a href="/vue-analysis/reactive/next-tick/#vue-的实现" class="sidebar-link">Vue 的实现</a></li><li class="sidebar-sub-header"><a href="/vue-analysis/reactive/next-tick/#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/vue-analysis/reactive/questions/" class="sidebar-link">检测变化的注意事项</a></li><li><a href="/vue-analysis/reactive/computed-watcher/" class="sidebar-link">计算属性 VS 侦听属性</a></li><li><a href="/vue-analysis/reactive/component-update/" class="sidebar-link">组件更新</a></li><li><a href="/vue-analysis/reactive/summary/" class="sidebar-link">原理图</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>编译</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/compile/" class="sidebar-link">Introduction</a></li><li><a href="/vue-analysis/compile/entrance/" class="sidebar-link">编译入口</a></li><li><a href="/vue-analysis/compile/parse/" class="sidebar-link">parse</a></li><li><a href="/vue-analysis/compile/optimize/" class="sidebar-link">optimize</a></li><li><a href="/vue-analysis/compile/codegen/" class="sidebar-link">codegen</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>扩展</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/extend/" class="sidebar-link">Introduction</a></li><li><a href="/vue-analysis/extend/event/" class="sidebar-link">event</a></li><li><a href="/vue-analysis/extend/v-model/" class="sidebar-link">v-model</a></li><li><a href="/vue-analysis/extend/slot/" class="sidebar-link">slot</a></li><li><a href="/vue-analysis/extend/keep-alive/" class="sidebar-link">keep-alive</a></li><li><a href="/vue-analysis/extend/transition/" class="sidebar-link">transition</a></li><li><a href="/vue-analysis/extend/transition-group/" class="sidebar-link">transition-group</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>Vue Router</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/vue-router/" class="sidebar-link">Introduction</a></li><li><a href="/vue-analysis/vue-router/install/" class="sidebar-link">路由注册</a></li><li><a href="/vue-analysis/vue-router/router/" class="sidebar-link">VueRouter 对象</a></li><li><a href="/vue-analysis/vue-router/matcher/" class="sidebar-link">matcher</a></li><li><a href="/vue-analysis/vue-router/transition-to/" class="sidebar-link">路径切换</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>Vuex</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue-analysis/vuex/" class="sidebar-link">Introduction</a></li><li><a href="/vue-analysis/vuex/init/" class="sidebar-link">Vuex 初始化</a></li><li><a href="/vue-analysis/vuex/api/" class="sidebar-link">API</a></li><li><a href="/vue-analysis/vuex/plugin/" class="sidebar-link">插件</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nexttick"><a href="#nexttick" class="header-anchor">#</a> nextTick</h1> <p><code>nextTick</code> 是 Vue 的一个核心实现，在介绍 Vue 的 nextTick 之前，为了方便大家理解，我先简单介绍一下 JS 的运行机制。</p> <h2 id="js-运行机制"><a href="#js-运行机制" class="header-anchor">#</a> JS 运行机制</h2> <p>JS 执行是单线程的，它是基于事件循环的。事件循环大致分为以下几个步骤：</p> <p>（1）所有同步任务都在主线程上执行，形成一个执行栈（execution context stack）。</p> <p>（2）主线程之外，还存在一个&quot;任务队列&quot;（task queue）。只要异步任务有了运行结果，就在&quot;任务队列&quot;之中放置一个事件。</p> <p>（3）一旦&quot;执行栈&quot;中的所有同步任务执行完毕，系统就会读取&quot;任务队列&quot;，看看里面有哪些事件。那些对应的异步任务，于是结束等待状态，进入执行栈，开始执行。</p> <p>（4）主线程不断重复上面的第三步。</p> <img src="/img/vue/event-loop.png"> <p>主线程的执行过程就是一个 tick，而所有的异步结果都是通过 “任务队列” 来调度。 消息队列中存放的是一个个的任务（task）。 规范中规定 task 分为两大类，分别是 macro task 和 micro task，并且每个 macro task 结束后，都要清空所有的 micro task。</p> <p>关于 macro task 和 micro task 的概念，这里不会细讲，简单通过一段代码演示他们的执行顺序：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span>macroTask <span class="token keyword">of</span> macroTaskQueue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 1. Handle current MACRO-TASK</span>
+    <span class="token function">handleMacroTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      
+    <span class="token comment">// 2. Handle all MICRO-TASK</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>microTask <span class="token keyword">of</span> microTaskQueue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">handleMicroTask</span><span class="token punctuation">(</span>microTask<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>在浏览器环境中，常见的 macro task 有 setTimeout、MessageChannel、postMessage、setImmediate；常见的 micro task 有 MutationObsever 和 Promise.then。</p> <h2 id="vue-的实现"><a href="#vue-的实现" class="header-anchor">#</a> Vue 的实现</h2> <p>在 Vue 源码 2.5+ 后，<code>nextTick</code> 的实现单独有一个 JS 文件来维护它，它的源码并不多，总共也就 100 多行。接下来我们来看一下它的实现，在 <code>src/core/util/next-tick.js</code> 中：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> noop <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'shared/util'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> handleError <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./error'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> isIOS<span class="token punctuation">,</span> isNative <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./env'</span>
+
+<span class="token keyword">const</span> callbacks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> pending <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token keyword">function</span> <span class="token function">flushCallbacks</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  pending <span class="token operator">=</span> <span class="token boolean">false</span>
+  <span class="token keyword">const</span> copies <span class="token operator">=</span> callbacks<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  callbacks<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> copies<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    copies<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Here we have async deferring wrappers using both microtasks and (macro) tasks.</span>
+<span class="token comment">// In &lt; 2.4 we used microtasks everywhere, but there are some scenarios where</span>
+<span class="token comment">// microtasks have too high a priority and fire in between supposedly</span>
+<span class="token comment">// sequential events (e.g. #4521, #6690) or even between bubbling of the same</span>
+<span class="token comment">// event (#6566). However, using (macro) tasks everywhere also has subtle problems</span>
+<span class="token comment">// when state is changed right before repaint (e.g. #6813, out-in transitions).</span>
+<span class="token comment">// Here we use microtask by default, but expose a way to force (macro) task when</span>
+<span class="token comment">// needed (e.g. in event handlers attached by v-on).</span>
+<span class="token keyword">let</span> microTimerFunc
+<span class="token keyword">let</span> macroTimerFunc
+<span class="token keyword">let</span> useMacroTask <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token comment">// Determine (macro) task defer implementation.</span>
+<span class="token comment">// Technically setImmediate should be the ideal choice, but it's only available</span>
+<span class="token comment">// in IE. The only polyfill that consistently queues the callback after all DOM</span>
+<span class="token comment">// events triggered in the same loop is by using MessageChannel.</span>
+<span class="token comment">/* istanbul ignore if */</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> setImmediate <span class="token operator">!==</span> <span class="token string">'undefined'</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isNative</span><span class="token punctuation">(</span>setImmediate<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">macroTimerFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setImmediate</span><span class="token punctuation">(</span>flushCallbacks<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> MessageChannel <span class="token operator">!==</span> <span class="token string">'undefined'</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
+  <span class="token function">isNative</span><span class="token punctuation">(</span>MessageChannel<span class="token punctuation">)</span> <span class="token operator">||</span>
+  <span class="token comment">// PhantomJS</span>
+  MessageChannel<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'[object MessageChannelConstructor]'</span>
+<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> channel <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MessageChannel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> port <span class="token operator">=</span> channel<span class="token punctuation">.</span>port2
+  channel<span class="token punctuation">.</span>port1<span class="token punctuation">.</span>onmessage <span class="token operator">=</span> flushCallbacks
+  <span class="token function-variable function">macroTimerFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    port<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* istanbul ignore next */</span>
+  <span class="token function-variable function">macroTimerFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span>flushCallbacks<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Determine microtask defer implementation.</span>
+<span class="token comment">/* istanbul ignore next, $flow-disable-line */</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> Promise <span class="token operator">!==</span> <span class="token string">'undefined'</span> <span class="token operator">&amp;&amp;</span> <span class="token function">isNative</span><span class="token punctuation">(</span>Promise<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> p <span class="token operator">=</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token function-variable function">microTimerFunc</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    p<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>flushCallbacks<span class="token punctuation">)</span>
+    <span class="token comment">// in problematic UIWebViews, Promise.then doesn't completely break, but</span>
+    <span class="token comment">// it can get stuck in a weird state where callbacks are pushed into the</span>
+    <span class="token comment">// microtask queue but the queue isn't being flushed, until the browser</span>
+    <span class="token comment">// needs to do some other work, e.g. handle a timer. Therefore we can</span>
+    <span class="token comment">// &quot;force&quot; the microtask queue to be flushed by adding an empty timer.</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>isIOS<span class="token punctuation">)</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>noop<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token comment">// fallback to macro</span>
+  microTimerFunc <span class="token operator">=</span> macroTimerFunc
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Wrap a function so that if any code inside triggers state change,
+ * the changes are queued using a (macro) task instead of a microtask.
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">withMacroTask</span> <span class="token punctuation">(</span><span class="token parameter">fn<span class="token operator">:</span> Function</span><span class="token punctuation">)</span><span class="token operator">:</span> Function <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> fn<span class="token punctuation">.</span>_withTask <span class="token operator">||</span> <span class="token punctuation">(</span>fn<span class="token punctuation">.</span><span class="token function-variable function">_withTask</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    useMacroTask <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>
+    useMacroTask <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token keyword">return</span> res
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">nextTick</span> <span class="token punctuation">(</span><span class="token parameter">cb<span class="token operator">?</span><span class="token operator">:</span> Function<span class="token punctuation">,</span> ctx<span class="token operator">?</span><span class="token operator">:</span> Object</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> _resolve
+  callbacks<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token function">cb</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">handleError</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> <span class="token string">'nextTick'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>_resolve<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">_resolve</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>pending<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    pending <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>useMacroTask<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">macroTimerFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">microTimerFunc</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// $flow-disable-line</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cb <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> Promise <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      _resolve <span class="token operator">=</span> resolve
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br></div></div><p><code>next-tick.js</code> 申明了 <code>microTimerFunc</code> 和 <code>macroTimerFunc</code> 2 个变量，它们分别对应的是 micro task 的函数和 macro task 的函数。对于 macro task 的实现，优先检测是否支持原生 <code>setImmediate</code>，这是一个高版本 IE 和 Edge 才支持的特性，不支持的话再去检测是否支持原生的 <code>MessageChannel</code>，如果也不支持的话就会降级为 <code>setTimeout 0</code>；而对于 micro task 的实现，则检测浏览器是否原生支持 Promise，不支持的话直接指向 macro task 的实现。</p> <p><code>next-tick.js</code> 对外暴露了 2 个函数，先来看 <code>nextTick</code>，这就是我们在上一节执行 <code>nextTick(flushSchedulerQueue)</code> 所用到的函数。它的逻辑也很简单，把传入的回调函数 <code>cb</code> 压入 <code>callbacks</code> 数组，最后一次性地根据 <code>useMacroTask</code> 条件执行 <code>macroTimerFunc</code> 或者是 <code>microTimerFunc</code>，而它们都会在下一个 tick 执行 <code>flushCallbacks</code>，<code>flushCallbacks</code> 的逻辑非常简单，对 <code>callbacks</code> 遍历，然后执行相应的回调函数。</p> <p>这里使用 <code>callbacks</code> 而不是直接在 <code>nextTick</code> 中执行回调函数的原因是保证在同一个 tick 内多次执行 <code>nextTick</code>，不会开启多个异步任务，而把这些异步任务都压成一个同步任务，在下一个 tick 执行完毕。</p> <p><code>nextTick</code> 函数最后还有一段逻辑：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cb <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> Promise <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token parameter">resolve</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    _resolve <span class="token operator">=</span> resolve
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>这是当 <code>nextTick</code> 不传 <code>cb</code> 参数的时候，提供一个 Promise 化的调用，比如：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>当 <code>_resolve</code> 函数执行，就会跳到 <code>then</code> 的逻辑中。</p> <p><code>next-tick.js</code> 还对外暴露了 <code>withMacroTask</code> 函数，它是对函数做一层包装，确保函数执行过程中对数据任意的修改，触发变化执行 <code>nextTick</code> 的时候强制走 <code>macroTimerFunc</code>。比如对于一些 DOM 交互事件，如 <code>v-on</code> 绑定的事件回调函数的处理，会强制走 macro task。</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>通过这一节对 <code>nextTick</code> 的分析，并结合上一节的 setter 分析，我们了解到数据的变化到 DOM 的重新渲染是一个异步过程，发生在下一个 tick。这就是我们平时在开发的过程中，比如从服务端接口去获取数据的时候，数据做了修改，如果我们的某些方法去依赖了数据修改后的 DOM 变化，我们就必须在 <code>nextTick</code> 后执行。比如下面的伪代码：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token function">getData</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>xxx <span class="token operator">=</span> res<span class="token punctuation">.</span>data
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 这里我们可以获取变化后的 DOM</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>Vue.js 提供了 2 种调用 <code>nextTick</code> 的方式，一种是全局 API <code>Vue.nextTick</code>，一种是实例上的方法 <code>vm.$nextTick</code>，无论我们使用哪一种，最后都是调用 <code>next-tick.js</code> 中实现的 <code>nextTick</code> 方法。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/YisenFE/blogs/edit/master/docs/VUE学习/vue-analysis/reactive/nextTick.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">7/25/2019, 6:43:56 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue-analysis/reactive/setters/" class="prev">
+        派发更新
+      </a></span> <span class="next"><a href="/vue-analysis/reactive/questions/">
+        检测变化的注意事项
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><div></div></div></div>
+    <script src="/assets/js/app.d27cd32c.js" defer></script><script src="/assets/js/2.92947368.js" defer></script><script src="/assets/js/49.996c2583.js" defer></script><script src="/assets/js/4.47214791.js" defer></script>
+  </body>
+</html>

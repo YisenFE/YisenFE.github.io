@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>element:初识 | Yisen的博客</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="shortcut icon" href="/img/shi.jpg">
+    <meta name="description" content="每一件事都要做到精彩绝伦!">
+    <link rel="preload" href="/assets/css/0.styles.f52552f8.css" as="style"><link rel="preload" href="/assets/js/app.d27cd32c.js" as="script"><link rel="preload" href="/assets/js/2.92947368.js" as="script"><link rel="preload" href="/assets/js/15.4f75d4bb.js" as="script"><link rel="preload" href="/assets/js/4.47214791.js" as="script"><link rel="prefetch" href="/assets/js/10.b84025ed.js"><link rel="prefetch" href="/assets/js/11.7c58c5d6.js"><link rel="prefetch" href="/assets/js/12.de2d8102.js"><link rel="prefetch" href="/assets/js/13.fe377b65.js"><link rel="prefetch" href="/assets/js/14.f1cd7aa2.js"><link rel="prefetch" href="/assets/js/16.906d6d4a.js"><link rel="prefetch" href="/assets/js/17.d95554d5.js"><link rel="prefetch" href="/assets/js/18.9dede249.js"><link rel="prefetch" href="/assets/js/19.0621538b.js"><link rel="prefetch" href="/assets/js/20.13e018e3.js"><link rel="prefetch" href="/assets/js/21.e4a06620.js"><link rel="prefetch" href="/assets/js/22.59f52ec6.js"><link rel="prefetch" href="/assets/js/23.4375f24d.js"><link rel="prefetch" href="/assets/js/24.60cdd050.js"><link rel="prefetch" href="/assets/js/25.4d704b8b.js"><link rel="prefetch" href="/assets/js/26.e631c778.js"><link rel="prefetch" href="/assets/js/27.d89a92fd.js"><link rel="prefetch" href="/assets/js/28.9fb2b865.js"><link rel="prefetch" href="/assets/js/29.e6c33b9a.js"><link rel="prefetch" href="/assets/js/3.74592acf.js"><link rel="prefetch" href="/assets/js/30.5072f4fc.js"><link rel="prefetch" href="/assets/js/31.3788aee1.js"><link rel="prefetch" href="/assets/js/32.6dca2967.js"><link rel="prefetch" href="/assets/js/33.d4f526b6.js"><link rel="prefetch" href="/assets/js/34.85f6fbec.js"><link rel="prefetch" href="/assets/js/35.c3af1511.js"><link rel="prefetch" href="/assets/js/36.e5984d80.js"><link rel="prefetch" href="/assets/js/37.665a9578.js"><link rel="prefetch" href="/assets/js/38.21ba26ad.js"><link rel="prefetch" href="/assets/js/39.0a876c87.js"><link rel="prefetch" href="/assets/js/40.89e82318.js"><link rel="prefetch" href="/assets/js/41.2a85a586.js"><link rel="prefetch" href="/assets/js/42.364f1105.js"><link rel="prefetch" href="/assets/js/43.b7afe916.js"><link rel="prefetch" href="/assets/js/44.45cc108b.js"><link rel="prefetch" href="/assets/js/45.8e8c0e3e.js"><link rel="prefetch" href="/assets/js/46.aec4a7c6.js"><link rel="prefetch" href="/assets/js/47.16de224f.js"><link rel="prefetch" href="/assets/js/48.1764fd61.js"><link rel="prefetch" href="/assets/js/49.996c2583.js"><link rel="prefetch" href="/assets/js/5.3113bf0c.js"><link rel="prefetch" href="/assets/js/50.e7e0b373.js"><link rel="prefetch" href="/assets/js/51.1e509337.js"><link rel="prefetch" href="/assets/js/52.9614344e.js"><link rel="prefetch" href="/assets/js/53.2888eeac.js"><link rel="prefetch" href="/assets/js/54.8e6da259.js"><link rel="prefetch" href="/assets/js/55.a19f7f2c.js"><link rel="prefetch" href="/assets/js/56.2ca5e5ed.js"><link rel="prefetch" href="/assets/js/57.bd9f18b7.js"><link rel="prefetch" href="/assets/js/58.ba151f1c.js"><link rel="prefetch" href="/assets/js/59.5fbb5939.js"><link rel="prefetch" href="/assets/js/6.7265dd24.js"><link rel="prefetch" href="/assets/js/60.81acd1a4.js"><link rel="prefetch" href="/assets/js/61.f7a24079.js"><link rel="prefetch" href="/assets/js/62.9bceffe9.js"><link rel="prefetch" href="/assets/js/63.e8e639ce.js"><link rel="prefetch" href="/assets/js/64.acff45e3.js"><link rel="prefetch" href="/assets/js/65.10d11424.js"><link rel="prefetch" href="/assets/js/66.f0145b9b.js"><link rel="prefetch" href="/assets/js/67.696da77d.js"><link rel="prefetch" href="/assets/js/68.7e5cd622.js"><link rel="prefetch" href="/assets/js/69.1d5a4b4b.js"><link rel="prefetch" href="/assets/js/7.4fd397db.js"><link rel="prefetch" href="/assets/js/70.6f77d1a2.js"><link rel="prefetch" href="/assets/js/71.221c9a4e.js"><link rel="prefetch" href="/assets/js/72.22c63902.js"><link rel="prefetch" href="/assets/js/73.8f267b72.js"><link rel="prefetch" href="/assets/js/74.01ccdeab.js"><link rel="prefetch" href="/assets/js/75.01d4ab49.js"><link rel="prefetch" href="/assets/js/76.a90a2120.js"><link rel="prefetch" href="/assets/js/8.a89bdf2e.js"><link rel="prefetch" href="/assets/js/9.3cd764a1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f52552f8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Yisen的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          VUE
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ele-01/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  element源码学习
+</a></li><li class="dropdown-subitem"><a href="/vue-analysis/" class="nav-link">
+  Vue.js 技术揭秘
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端杂记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zaji-09/" class="nav-link">
+  从零开发一个node命令行工具
+</a></li><li class="dropdown-subitem"><a href="/zaji-08/" class="nav-link">
+  vscode调试webpack
+</a></li><li class="dropdown-subitem"><a href="/zaji-07/" class="nav-link">
+  provisional headers are shown 知多少
+</a></li><li class="dropdown-subitem"><a href="/zaji-06/" class="nav-link">
+  浏览器解析和渲染
+</a></li><li class="dropdown-subitem"><a href="/zaji-05/" class="nav-link">
+  markdown-it插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-04/" class="nav-link">
+  uppercamelcase插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-03/" class="nav-link">
+  json-templater/string插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-02/" class="nav-link">
+  postcss.parse()方法
+</a></li><li class="dropdown-subitem"><a href="/zaji-01/" class="nav-link">
+  shell中&amp;&amp;和&amp;的区别
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript深入
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js-prototype/" class="nav-link">
+  详解JS原型链与继承
+</a></li><li class="dropdown-subitem"><a href="/js-scope/" class="nav-link">
+  词法作用域和动态作用域
+</a></li><li class="dropdown-subitem"><a href="/js-instanceof/" class="nav-link">
+  instanceof运算符深入剖析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CSS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css-01/" class="nav-link">
+  什么是BFC
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://YisenFE.github.io/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/YisenFE/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="大前端" class="dropdown-title"><span class="title">大前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          VUE
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ele-01/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  element源码学习
+</a></li><li class="dropdown-subitem"><a href="/vue-analysis/" class="nav-link">
+  Vue.js 技术揭秘
+</a></li></ul></li><li class="dropdown-item"><h4>
+          前端杂记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/zaji-09/" class="nav-link">
+  从零开发一个node命令行工具
+</a></li><li class="dropdown-subitem"><a href="/zaji-08/" class="nav-link">
+  vscode调试webpack
+</a></li><li class="dropdown-subitem"><a href="/zaji-07/" class="nav-link">
+  provisional headers are shown 知多少
+</a></li><li class="dropdown-subitem"><a href="/zaji-06/" class="nav-link">
+  浏览器解析和渲染
+</a></li><li class="dropdown-subitem"><a href="/zaji-05/" class="nav-link">
+  markdown-it插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-04/" class="nav-link">
+  uppercamelcase插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-03/" class="nav-link">
+  json-templater/string插件
+</a></li><li class="dropdown-subitem"><a href="/zaji-02/" class="nav-link">
+  postcss.parse()方法
+</a></li><li class="dropdown-subitem"><a href="/zaji-01/" class="nav-link">
+  shell中&amp;&amp;和&amp;的区别
+</a></li></ul></li><li class="dropdown-item"><h4>
+          JavaScript深入
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/js-prototype/" class="nav-link">
+  详解JS原型链与继承
+</a></li><li class="dropdown-subitem"><a href="/js-scope/" class="nav-link">
+  词法作用域和动态作用域
+</a></li><li class="dropdown-subitem"><a href="/js-instanceof/" class="nav-link">
+  instanceof运算符深入剖析
+</a></li></ul></li><li class="dropdown-item"><h4>
+          CSS
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/css-01/" class="nav-link">
+  什么是BFC
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://YisenFE.github.io/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  导航
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/YisenFE/blogs" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>element源码学习</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ele-01/" aria-current="page" class="active sidebar-link">element:初识</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ele-01/#package-json" class="sidebar-link">package.json</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ele-01/#生产依赖" class="sidebar-link">生产依赖</a></li><li class="sidebar-sub-header"><a href="/ele-01/#开发依赖" class="sidebar-link">开发依赖</a></li><li class="sidebar-sub-header"><a href="/ele-01/#脚本（scripts对象）" class="sidebar-link">脚本（scripts对象）</a></li></ul></li><li class="sidebar-sub-header"><a href="/ele-01/#项目结构" class="sidebar-link">项目结构</a></li></ul></li><li><a href="/ele-02/" class="sidebar-link">element:执行dev脚本</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h4 id=""><a href="#" class="header-anchor">#</a></h4> <h2 id="package-json"><a href="#package-json" class="header-anchor">#</a> package.json</h2> <blockquote><p>先从<code>package.json</code>开始看起</p></blockquote> <h3 id="生产依赖"><a href="#生产依赖" class="header-anchor">#</a> 生产依赖</h3> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 异步验证插件</span>
+    <span class="token property">&quot;async-validator&quot;</span><span class="token operator">:</span> <span class="token string">&quot;~1.8.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// JSX语法</span>
+    <span class="token property">&quot;babel-helper-vue-jsx-merge-props&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 深度合并插件</span>
+    <span class="token property">&quot;deepmerge&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 滚轮插件</span>
+    <span class="token property">&quot;normalize-wheel&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 实现响应式VUE组件</span>
+    <span class="token property">&quot;resize-observer-polyfill&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.5.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 防抖节流插件</span>
+    <span class="token property">&quot;throttle-debounce&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.1&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="开发依赖"><a href="#开发依赖" class="header-anchor">#</a> 开发依赖</h3> <div class="language-json line-numbers-mode"><pre class="language-json"><code>  <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 编译.vue文件</span>
+    <span class="token property">&quot;@vue/component-compiler-utils&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.6.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 一个托管的全文、数字和分面搜索引擎，能够在第一次按键时提供实时结果。</span>
+    <span class="token property">&quot;algoliasearch&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.24.5&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// babel</span>
+    <span class="token property">&quot;babel-cli&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.26.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-core&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.26.3&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.1.5&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-plugin-add-module-exports&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.2.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-plugin-istanbul&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.1.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-plugin-module-resolver&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-plugin-syntax-jsx&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.18.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-plugin-transform-vue-jsx&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.7.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-preset-env&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.7.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-preset-stage-2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.24.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;babel-regenerator-runtime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.5.0&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// chai断言库</span>
+    <span class="token property">&quot;chai&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// node fs工具</span>
+    <span class="token property">&quot;chokidar&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.7.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 将单个文件或整个目录复制到构建目录。</span>
+    <span class="token property">&quot;copy-webpack-plugin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^5.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 代码测试覆盖率</span>
+    <span class="token property">&quot;coveralls&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.0.3&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 跨平台支持UNIX命令</span>
+    <span class="token property">&quot;cp-cli&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 运行在平台上设置和使用环境变量的脚本。</span>
+    <span class="token property">&quot;cross-env&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.1.3&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// CSS加载器</span>
+    <span class="token property">&quot;css-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.1.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// es6 promise支持</span>
+    <span class="token property">&quot;es6-promise&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.0.5&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// eslint</span>
+    <span class="token property">&quot;eslint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;4.14.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;eslint-config-elemefe&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.1.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;eslint-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;eslint-plugin-html&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;eslint-plugin-json&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.2.0&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// 文件加载</span>
+    <span class="token property">&quot;file-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.1.11&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 文件保存</span>
+    <span class="token property">&quot;file-save&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.2.0&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// gulp</span>
+    <span class="token property">&quot;gulp&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;gulp-autoprefixer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;gulp-cssmin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;gulp-sass&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.0.2&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// js 高亮</span>
+    <span class="token property">&quot;highlight.js&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^9.3.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// html webpack插件</span>
+    <span class="token property">&quot;html-webpack-plugin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// json加载器</span>
+    <span class="token property">&quot;json-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.5.7&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// json和js的模版生成工具</span>
+    <span class="token property">&quot;json-templater&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.4&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// karma测试库</span>
+    <span class="token property">&quot;karma&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;karma-chrome-launcher&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.2.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;karma-coverage&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.1.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;karma-mocha&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.3.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;karma-sinon-chai&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;karma-sourcemap-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.3.7&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;karma-spec-reporter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.0.32&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;karma-webpack&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.0.5&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// 将markdown变为html的解析器</span>
+    <span class="token property">&quot;markdown-it&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^8.4.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;markdown-it-anchor&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^5.0.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;markdown-it-chain&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.3.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;markdown-it-container&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.0.0&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// 压缩css</span>
+    <span class="token property">&quot;mini-css-extract-plugin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.4.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// mocha测试库</span>
+    <span class="token property">&quot;mocha&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^6.0.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// node.js的sass</span>
+    <span class="token property">&quot;node-sass&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.11.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 优化/最小化css资源</span>
+    <span class="token property">&quot;optimize-css-assets-webpack-plugin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^5.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 视差滚动 https://perspective.js.org/#/zh-cn/</span>
+    <span class="token property">&quot;perspective.js&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;postcss&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.0.14&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 命令行进度条插件</span>
+    <span class="token property">&quot;progress-bar-webpack-plugin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.11.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// node.js 深度删除模块</span>
+    <span class="token property">&quot;rimraf&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.5.4&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// sass加载器</span>
+    <span class="token property">&quot;sass-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.1.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 选择发布版本</span>
+    <span class="token property">&quot;select-version-cli&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.0.2&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// sinon测试框架</span>
+    <span class="token property">&quot;sinon&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^7.2.7&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;sinon-chai&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.3.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;style-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^0.23.1&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// utf-8 字符转换</span>
+    <span class="token property">&quot;transliteration&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.1.11&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 压缩js插件</span>
+    <span class="token property">&quot;uglifyjs-webpack-plugin&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^2.1.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// 驼峰写法</span>
+    <span class="token property">&quot;uppercamelcase&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.1.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// url加载器</span>
+    <span class="token property">&quot;url-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.1&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// vue</span>
+    <span class="token property">&quot;vue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.5.21&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;vue-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^15.7.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;vue-router&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.0.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;vue-template-compiler&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.5.21&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;vue-template-es2015-compiler&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.6.0&quot;</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// webpack</span>
+    <span class="token property">&quot;webpack&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^4.14.0&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;webpack-cli&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.0.8&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;webpack-dev-server&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^3.1.11&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;webpack-node-externals&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.7.2&quot;</span>
+  <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br></div></div><h3 id="脚本（scripts对象）"><a href="#脚本（scripts对象）" class="header-anchor">#</a> 脚本（scripts对象）</h3> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;bootstrap&quot;</span><span class="token operator">:</span> <span class="token string">&quot;yarn || npm i&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build:file&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node build/bin/iconInit.js &amp; node build/bin/build-entry.js &amp; node build/bin/i18n.js &amp; node build/bin/version.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build:theme&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node build/bin/gen-cssfile &amp;&amp; gulp build --gulpfile packages/theme-chalk/gulpfile.js &amp;&amp; cp-cli packages/theme-chalk/lib lib/theme-chalk&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;deploy:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run build:file &amp;&amp; cross-env NODE_ENV=production webpack --config build/webpack.demo.js &amp;&amp; echo element.eleme.io&gt;&gt;examples/element-ui/CNAME&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run bootstrap &amp;&amp; npm run build:file &amp;&amp; cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js &amp; node build/bin/template.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;dev:play&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run build:file &amp;&amp; cross-env NODE_ENV=development PLAY_ENV=true webpack-dev-server --config build/webpack.demo.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;dist&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run clean &amp;&amp; npm run build:file &amp;&amp; npm run lint &amp;&amp; webpack --config build/webpack.conf.js &amp;&amp; webpack --config build/webpack.common.js &amp;&amp; webpack --config build/webpack.component.js &amp;&amp; npm run build:utils &amp;&amp; npm run build:umd &amp;&amp; npm run build:theme&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;i18n&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node build/bin/i18n.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lint&quot;</span><span class="token operator">:</span> <span class="token string">&quot;eslint src/**/* test/**/* packages/**/* build/**/* --quiet&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;pub&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run bootstrap &amp;&amp; sh build/git-release.sh &amp;&amp; sh build/release.sh &amp;&amp; node build/bin/gen-indices.js &amp;&amp; sh build/deploy-faas.sh&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;test&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run lint &amp;&amp; npm run build:theme &amp;&amp; cross-env CI_ENV=/dev/ BABEL_ENV=test karma start test/unit/karma.conf.js --single-run&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;test:watch&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run build:theme &amp;&amp; cross-env BABEL_ENV=test karma start test/unit/karma.conf.js&quot;</span>
+  <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><code>如果说 package.json 是学习框架的第一部分，那么其中 scripts 对象则是重中之重。script 里面指定了项目的生命周期各个环节需要执行的命令，体现了项目的开发、测试、打包、部署等架构关系。</code></p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>其中 scripts 对象的 key 是生命周期中的事件，而 value 是要执行的 shell 命令。</p></div> <h2 id="项目结构"><a href="#项目结构" class="header-anchor">#</a> 项目结构</h2> <table><thead><tr><th>目录名</th> <th>目录描述</th></tr></thead> <tbody><tr><td><code>build</code></td> <td>放置webpack的配置文件</td></tr> <tr><td><code>examples</code></td> <td>放置element api的页面文档</td></tr> <tr><td><code>packages</code></td> <td>放置element的组件（css样式放置在这个目录的<code>theme-chalk</code>下）</td></tr> <tr><td><code>src/directives</code></td> <td>放置自定义指令</td></tr> <tr><td><code>src/locale</code></td> <td>放置语言的配置文件</td></tr> <tr><td><code>src/mixins</code></td> <td>放置组件用的混入文件</td></tr> <tr><td><code>src/transitions</code></td> <td>放置动画配置文件</td></tr> <tr><td><code>src/utils</code></td> <td>放置用到的工具函数</td></tr> <tr><td><code>src/index.js</code></td> <td>组件注册的入口文件</td></tr> <tr><td><code>test</code></td> <td>测试文件</td></tr> <tr><td><code>types</code></td> <td>这个文件里放了typescript的数据类</td></tr></tbody></table></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/YisenFE/blogs/edit/master/docs/VUE学习/elementUI/01-认识element框架.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">1/14/2020, 11:14:12 AM</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/ele-02/">
+        element:执行dev脚本
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><div></div></div></div>
+    <script src="/assets/js/app.d27cd32c.js" defer></script><script src="/assets/js/2.92947368.js" defer></script><script src="/assets/js/15.4f75d4bb.js" defer></script><script src="/assets/js/4.47214791.js" defer></script>
+  </body>
+</html>
